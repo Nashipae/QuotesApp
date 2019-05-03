@@ -1,10 +1,18 @@
 <p><b>Quote: {{quote.description}}</b></p>
 <p>What's your opinion on this quote?</p>
-<button class="btn btn-success" (click) = 'quoteLike(true)'>Like</button>
+<!-- <button class="btn btn-success" (click) = 'quoteLike(true)'>Like</button>
 <div>
   <br>
 <button class="btn btn-danger" (click)='quoteLike(false)'>Dislike</button>
+</div> -->
+
+<button class="btn btn-success" (click)=submitUpvote(quote)>Like</button>
+<span class="vote">{{ quote.upVote }}</span>
+<div>
+  <br>
+<button class="btn btn-danger" (click)=submitDownvote(quote)>Dislike</button>
 </div>
+
 <div>
 <p>This quote has stayed {{quote.entryDate|dateCount}} days since creation.</p>
 </div>

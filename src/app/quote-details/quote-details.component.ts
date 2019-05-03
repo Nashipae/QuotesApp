@@ -15,6 +15,13 @@ export class QuoteDetailsComponent implements OnInit {
   //   this.isBoring.emit(boring);
   // }
 
+  submitUpvote(quote) {
+  quote.upvote = quote.upvote + 1;
+}
+
+submitDownvote(quote) {
+  quote.downvote = quote.downvote + 1;
+}
   constructor() { }
 
   ngOnInit() {
