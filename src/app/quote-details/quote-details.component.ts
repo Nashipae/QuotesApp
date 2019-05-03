@@ -8,12 +8,12 @@ import { Quote } from "../quote";
 })
 export class QuoteDetailsComponent implements OnInit {
 
-  // @Input() quote:Quote;
-  // @Output() isBoring = new EventEmitter<boolean>();
+  @Input() quote:Quote;
+  @Output() isBoring = new EventEmitter<boolean>();
 
-  quoteLike(like:boolean){
-    this.isBoring.emit(boring);
-  }
+  // quoteLike(like:boolean){
+  //   this.isBoring.emit(boring);
+  // }
 
   constructor() { }
 

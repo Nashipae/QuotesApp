@@ -8,7 +8,7 @@ import { Quote } from "../quote";
 })
 export class QuoteComponent implements OnInit {
 
-  quotes =[]
+  quotes = [new Quote(1, 'John Wooden', 'Things turn out best for the people who make the best of the way things turn out.',  new Date(2019,5,3)),]
 
   // Adding a new quote to the list.
   addNewQuote(quote){
@@ -21,13 +21,13 @@ export class QuoteComponent implements OnInit {
 
   //Adding and hiding quotes details
   toggleDetails(index){
-  this.quotes[index].showDesription = !this.quotes[index].showDesription;
+  this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
   //Deleting a quote
   deleteQuote(isBoring, index){
     if(isBoring){
-      let toDelete = confirm(`Do you like this quote? ${this.quotes[index].name}`);
+      let toDelete = confirm(`Do you like this quote? ${this.quotes[index].description}`);
     if (toDelete){
       this.quotes.splice(index,1);
     }
