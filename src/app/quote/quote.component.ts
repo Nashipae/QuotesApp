@@ -8,6 +8,8 @@ import { Quote } from "../quote";
 })
 export class QuoteComponent implements OnInit {
 
+   title='Favorite Quotes'
+   
   quotes = []
   // [new Quote(1, 'John Wooden', 'Things turn out best for the people who make the best of the way things turn out.',  new Date(2019,5,3)),]
 
