@@ -19,7 +19,9 @@ export class QuoteComponent implements OnInit {
   }
 
   //Adding and hiding goals details
+  toggleDetails(index){
   this.quotes[index].showDesription = !this.quotes[index].showDesription;
+  }
 
   //Deleting a quote
   deleteQuote(isBoring, index){
