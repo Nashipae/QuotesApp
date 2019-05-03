@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Quote} from "../quote";
+import { Quote } from "../quote";
 
 @Component({
   selector: 'app-quote',
@@ -14,8 +14,8 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength +1;
-    quote.timeLapse = new Date
-    (quote.timeLapse)
+    quote.entryDate = new Date
+    (quote.entryDate)
     this.quotes.push(quote)
   }
 

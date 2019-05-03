@@ -1,9 +1,9 @@
-export class Quotes {
+export class Quote {
 
-// public showDescription: boolean;
+public showDescription: boolean;
 
   constructor(
-    public id:number, public name: string, public details: string, public timeLapse: Date)
+    public id:number, public name: string, public details: string, public entryDate: Date)
 
     this.showDescription=false;
   }
