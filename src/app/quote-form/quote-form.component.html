@@ -30,7 +30,7 @@
       <!-- Date Input -->
       <div class="form-group">
         <label for="entry">Entry Date </label>
-        <input type='date' id="entry" [(ngModel)]="newQuote.entryDate" name="entryDate" #completeDate="ngModel"
+        <input type='date' id="entry" [(ngModel)]="newQuote.entryDate" name="entryDate" #entryDate="ngModel"
           required>
         <div [hidden]="entryDate.valid || entryDate.pristine" class="alert alert-danger">
           <p> Entry Date is Required</p>
