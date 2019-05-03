@@ -13,7 +13,8 @@
 <div class="container">
   <div class="row" *ngFor="let quote of quotes; let i=index">
     <div>
-      <h4 id="{{i}}">{{quote.name}} Entry date {{quote.entryDate | date }}</h4>
+      <h4 id="{{i}}">{{quote.name}} </h4>
+        <p>Entry date {{quote.entryDate | date }}</p>
       <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>
     </div>
     <div class="row" *ngIf="quote.showDescription">

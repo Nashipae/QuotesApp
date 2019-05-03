@@ -5,17 +5,27 @@
 
       <!-- Quote Input -->
       <div class="form-group">
-      <label for="description">Quote </label>
-      <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description"
+      <label for="description">Quote: </label>
+      <div></div>
+      <textarea placeholder="You can add your favorite quote here." rows="30" cols ="100" class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description"
       #description="ngModel" required></textarea>
 
       </div>
 
       <!-- Author Input -->
       <div class="form-group">
-        <label for="name">Author </label>
+        <label for="name">Author: </label>
+        <div></div>
+        <input rows="5" cols ="50" placeholder="Name" type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
+      </div>
+
+      <!-- Submitter Input -->
+      <div class="form-group">
+        <label for="name">Submitted by: </label>
+        <div></div>
         <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
       </div>
+      <div class="row"></div>
 
       <!-- Date Input -->
       <div class="form-group">
