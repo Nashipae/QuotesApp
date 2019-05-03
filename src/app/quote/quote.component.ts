@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Quote} from "../quote";
 
 @Component({
   selector: 'app-quote',
@@ -18,7 +19,7 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-  //Adding and hiding goals details
+  //Adding and hiding quotes details
   toggleDetails(index){
   this.quotes[index].showDesription = !this.quotes[index].showDesription;
   }
