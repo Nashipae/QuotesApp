@@ -1,0 +1,9 @@
+.container{
+  background-color: greenyellow;
+}
+#content{
+  background-color: darkred;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+
+}

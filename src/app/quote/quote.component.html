@@ -6,15 +6,15 @@
 <div class="container">
 
 </div>
-<div>
+<div id="content">
   <p>Here's a chance for you to share your favorite quote and get to know whether it's liked by others. Also, please vote on whether each quote that has been shared is inspirational or terrible in your opinion. Your input matters! </p>
 </div>
 <app-quote-form (addQuote)="addNewQuote ($event)"></app-quote-form>
 <div class="container">
   <div class="row" *ngFor="let quote of quotes; let i=index">
     <div>
-      <h4 id="{{i}}" appStrikethrough>{{quote.name}} Entry date {{quote.entryDate | date }}</h4>
-      <button class="btn btn-primary" (click)='toggleDetails(i)'>Toggle Details</button>
+      <h4 id="{{i}}">{{quote.name}} Entry date {{quote.entryDate | date }}</h4>
+      <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>
     </div>
     <div class="row" *ngIf="quote.showDescription">
       <app-quote-details [quote]='quote' (isBoring)='deleteQuote($event,i)'></app-quote-details>
