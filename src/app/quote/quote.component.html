@@ -15,6 +15,9 @@
     <div class="column col-lg-2"></div>
     <div class="column col-lg-8">
       <h4 id="{{i}}">{{quote.name}} </h4>
+      <p><b>Quote: {{quote.description}}</b></p>
+      <p><b>Author: {{quote.author}}</b></p>
+      <p><b>Submitter: {{quote.Submitter}}</b></p>
         <p>Entry date {{quote.entryDate | date }}</p>
       <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>
     </div>

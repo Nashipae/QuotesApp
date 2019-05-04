@@ -20,7 +20,7 @@ export class QuoteDetailsComponent implements OnInit {
   // }
 
   submitUpvote(quote) {
-  quote.upvote = this.quote.upVote + 1;
+  quote.upVote = this.quote.upVote + 1;
 }
 
 submitDownvote(quote) {
