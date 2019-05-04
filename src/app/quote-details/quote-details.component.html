@@ -1,4 +1,6 @@
 <p><b>Quote: {{quote.description}}</b></p>
+<p><b>Author: {{quote.author}}</b></p>
+<p><b>Submitter: {{quote.Submitter}}</b></p>
 <p>What's your opinion on this quote?</p>
 <!-- <button class="btn btn-success" (click) = 'quoteLike(true)'>Like</button>
 <div>
@@ -17,3 +19,4 @@
 <div>
 <p>This quote has stayed {{quote.entryDate|dateCount}} days since creation.</p>
 </div>
+<p><button (click)='quoteDelete(true)'>Delete quote</button></p>

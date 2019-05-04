@@ -8,19 +8,23 @@ import { Quote } from "../quote";
 })
 export class QuoteDetailsComponent implements OnInit {
 
-  @Input() quote:Quote;
+    @Input() quote:Quote;
   @Output() isBoring = new EventEmitter<boolean>();
+
+  quoteDelete(complete: boolean) {
+    this.isBoring.emit(complete);
+  }
 
   // quoteLike(like:boolean){
   //   this.isBoring.emit(boring);
   // }
 
   submitUpvote(quote) {
-  quote.upvote = quote.upvote + 1;
+  quote.upvote = this.quote.upVote + 1;
 }
 
 submitDownvote(quote) {
-  quote.downvote = quote.downvote + 1;
+  this.quote.downVote = this.quote.downVote + 1;
 }
   constructor() { }
 
