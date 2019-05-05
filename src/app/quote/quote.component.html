@@ -3,33 +3,36 @@
     Welcome to {{ title }}!
   </h1>
   <hr>
-<div class="container">
+  <div class="container">
 
-</div>
-<div id="content">
-  <p>Here's a chance for you to share your favorite quote and get to know whether it's liked by others. Also, please vote on whether each quote that has been shared is inspirational or terrible in your opinion. Your input matters! </p>
-</div>
-<app-quote-form (addQuote)="addNewQuote ($event)"></app-quote-form>
-<div class="container">
-  <div class="row" *ngFor="let quote of quotes; let i=index">
-    <div class="column col-lg-2"></div>
-    <div class="column col-lg-8">
-      <h4 id="{{i}}">{{quote.name}} </h4>
-      <p><b>Quote: {{quote.description}}</b></p>
-      <p><b>Author: {{quote.author}}</b></p>
-      <p><b>Submitter: {{quote.Submitter}}</b></p>
+  </div>
+  <div id="content">
+    <p>Here's a chance for you to share your favorite quote and get to know whether it's liked by others. Also, please
+      vote on whether each quote that has been shared is inspirational or terrible in your opinion. Your input matters!
+    </p>
+  </div>
+  <div class="row">
+    <app-quote-form (addQuote)="addNewQuote ($event)"></app-quote-form>
+  </div>
+  <div class="container">
+    <div class="row" *ngFor="let quote of quotes; let i=index">
+      <div class="column col-lg-2"></div>
+      <div class="column col-lg-8">
+        <!-- <h4 id="{{i}}">{{quote.description}} </h4> -->
+        <p><b>Quote: {{quote.description}}</b></p>
+        <p><b>Author: {{quote.author}}</b></p>
+        <p><b>Submitter: {{quote.Submitter}}</b></p>
         <p>Entry date {{quote.entryDate | date }}</p>
-      <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>
-    </div>
-    <div class="column col-lg-2"></div>
-    <div class="row" *ngIf="quote.showDescription">
-      <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isBoring)='deleteQuote($event,i)'></app-quote-details>
-    </div>
+        <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>
+      </div>
+      <div class="column col-lg-2"></div>
+
+      <div class="row" *ngIf="quote.showDescription">
+
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isBoring)='deleteQuote($event,i)'>
+        </app-quote-details>
+      </div>
 
 
     </div>
-    </div>
-
-
-
-
+  </div>

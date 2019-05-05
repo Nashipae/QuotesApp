@@ -3,11 +3,8 @@
 <span class="vote">{{ quote.upVote }}</span>
 <div>
   <br>
-<button class="btn btn-danger" (click)=submitDownvote(quote)>Dislike</button>
-<span class="vote">{{ quote.downVote }}</span>
+  <button class="btn btn-danger" (click)=submitDownvote(quote)>Dislike</button>
+  <span class="vote">{{ quote.downVote }}</span>
 </div>
-
-<div>
 <p>This quote has stayed {{quote.entryDate|dateCount}} days since creation.</p>
-</div>
 <p><button (click)='quoteDelete(true)'>Delete quote</button></p>
